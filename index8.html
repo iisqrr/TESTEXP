@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="exp1.css">
+  </head>         
+  <body>   
+    <div id="firstscreen">    
+    </div>
+    <img src="readyfirst.png" alt="No Instruments shown" id="firstimg"> 
+    <a id="firstbtn" onclick="hidefirstscreen()" ><button id="firstbutton" onclick="hidefirstscreen()" >Click to Start The Practical</button></a>
+        <div id="screen7">
+        <img src="formula.png" alt="sorry error occured" id="screen7img">
+        <a onclick="further(),nextVideo()" id="screen7btn"><button id="screen7button" onclick="further(),nextVideo()">Click To Move Further</button></a>
+      </div>
+
+    <div id="headcontainer">
+    <header>
+      <nav>
+        <ul>
+          <li class="exp"><a href="index8.html">Determination of Rate of Starch Hydrolysis</a></li>
+          <li class="sidebar" onclick="showSidemenublock()">
+            <a href="#"
+              ><img class="menubarimg" src="correctmenu.png" alt="Image Error"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      </header>
+    </div>
+    <div class="sidemenublock" id="sidemenublock1">
+      <h2>TASK COMPLETION</h2>
+      <div class="svgimg" onclick="closesidemenublock()">
+        <a href="#"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            >
+            <!-- height: 1.3vh;
+        width: 1.3vw; -->
+            <g>
+              <path
+                d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"
+              />
+              <polygon
+                points="7.293 13.293 8.707 14.707 12 11.414 15.293 14.707 16.707 13.293 12 8.586 7.293 13.293"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div id="menublockitem">
+        
+        
+      </div>
+    </div>
+      
+    <div id="midcontent">
+    <video id="myVideo">
+      <!-- You can set the source of your video file here -->
+      <source src="vo1_.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h1 id="titration">Titration Start
+    </h1>
+     <button id="thirdbtn" onclick="closeonbtn(),closethirdbtn(),shownextbtn(),fourthbtn(),closetarebtn()">Transfer to Conical Flask</button>
+    <button id="play-button" onclick="closeplaybutton(),showthirdbtn(),playAtSpecifiedTime1()">2.Weigh the Starch</button>
+    <!-- <button  id="next-button" onclick="nextVideo()">Next</button> -->
+    <button id="next-button" onclick="showSidemenublock(),nextVideo(),closenextbtn(),closeplaybutton()">Move to Next Step</button> 
+    <!-- closenextbutton() -->
+    
+    <button id="play-at-button" onclick="closeplayatbutton(),playAtSpecifiedTime(),showplaybtn()">
+     Weigh petri dish
+    </button>
+    <p><img onclick="onbtn(),showbtn(),showtare()" src="onbtn.png" alt="cant open it" id="onbtn"></p>
+     <button id="tare" onclick="thirdbtn(),closetarebtn(),showplaybtn(),playbtn1z()" >Tare</button>
+     <a id="ctra" onclick="calshow()" ><button id="ctr" >Click to refresh</button></a>
+</div>
+<div id="finalcal">
+   <img src="expcal.jpg" alt="" id="calimg">
+  <a id="refresh" href="index8.html"><button id="refbut" >Click to Return To Home Screen</button></a>
+</div>
+
+
+
+  
+    <input
+      type="number"
+      id="start-time"
+      style="display: none"
+      value="1.1"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="end-time"
+      style="display: none"
+      value="4"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="start-time1"
+      style="display: none"
+      value="5.1"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="end-time1"
+      style="display: none"
+      value="8.7"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="start-time2"
+      style="display: none"
+      value="0.1"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="end-time2"
+      style="display: none"
+      value="1"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="start-time3"
+      style="display: none"
+      value="4.1"  
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="end-time3"
+      style="display: none"
+      value="5"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="start-time4"
+      style="display: none"
+      value="8.1"
+      min="0"
+      step="1"
+    />
+    <input
+      type="number"
+      id="end-time4"
+      style="display: none"
+      value="14"
+      min="0"
+      step="1"
+    />
+
+    
+    <script src="exp1.js"></script>
+  </body>
+</html>
